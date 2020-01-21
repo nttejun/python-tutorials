@@ -103,3 +103,75 @@ print(output_i)
 print(output_j)
 print(output_k)
 
+float_aa = "{:15f}".format(52)
+float_bb = "{:15.3f}".format(52)
+float_cc = "{:15.3f}".format(52.2)
+float_dd = "{:15.3f}".format(52.23455)
+float_ee = "{:g}".format(52.00)
+float_ff = "{:g}".format(52.2350)
+float_gg = "{:g}".format(52.255)
+print(float_aa)
+print(float_bb)
+print(float_cc)
+print(float_dd)
+print(float_ee)
+print(float_ff)
+print(float_gg)
+
+sentence_a = """
+    문자열
+    함수
+    호출
+"""
+print(sentence_a)
+print(sentence_a.strip())
+
+isCheck_a = "test"
+print("isCheck : ".isalnum())
+print("isCheck  ".isalnum())
+print("isCheck".isalnum())
+print("-1".isdecimal())
+print("-1".isdigit())
+print("isCheck ! @ ".isdecimal())
+print(isCheck_a.isidentifier())
+print("3".isdecimal())
+print("3".isdigit())
+
+find_a = "테스트케이스".find("스")
+find_b = "테스트케이스".find("가")
+find_c = "테스트케이스".rfind("스")
+print(find_a)
+print(find_b)
+print(find_c)
+
+in_a = "테스트케이스" in "가나다"
+in_b = "테스트케이스" in "테스"
+print(in_a)
+print(in_b)
+print("테스트케이스" in "테스트")
+
+in_c = "가나다" in "테스트케이스"
+in_d = "테스" in "테스트케이스"
+print(in_c)
+print(in_d)
+print("테스트" in "테스트케이스")
+
+split_a = "테 스 트 케 이 스".split(" ")
+print(split_a)
+
+print(not True)
+print(not False)
+
+under_num = 10
+print("under_num:", under_num)
+print("under_num", under_num)
+print("not under_num", not under_num)
+
+print("치킨", "치킨" or "배달")
+print("치킨", "치킨" and "배달")
+
+discount = "치킨" or "피자"
+print(discount, "치킨")
+print(discount, "짜장면")
+print("치킨", discount)
+print("짜장면", discount)
