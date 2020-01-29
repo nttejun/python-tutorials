@@ -55,3 +55,42 @@ else:
 
 if now.month >= 1 or now.month <= 3:
     print("{}월로 봄입니다.".format(now.month))
+
+print("가나" < "다라")
+print("1" < "10")
+
+condition_x = 10
+condition_a = condition_x < 20
+print("condition_a : ",condition_a)
+
+if 10 % 2 == 0:
+    print("10 % 2 TRUE")
+
+
+if 10 % 2 == 1:
+    print("10 % 2 FALSE")
+else:
+    print("10 % 2 == 0")
+
+
+if 5 % 2 == 0:
+    print("5 % 2 == 0")
+elif 5 % 2 == 2:
+    print("5 % 2 == 2")
+elif 5 % 2 == 1:
+    print("5 % 2 == 1")
+else:
+    print("5 % 2 == else")
+
+if 2 == 2:
+    pass
+elif 1 == 1:
+    print("1 == 1")
+else:
+    print("else")
+
+if 5+5 == 10:
+    print("NotImplementedError Exception 발생")
+    raise NotImplementedError
+else:
+    raise NotImplementedError
