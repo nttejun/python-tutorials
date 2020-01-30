@@ -68,5 +68,56 @@ print(20 not in list_e)
 for i in range(5):
     print("출력 : ", i)
 
-for i in list_e:
-    print("출력 : ", list_e[i-1])
+list_f = {"가": 1,
+          "나": 2}
+print(list_f)
+print(list_f["나"])
+
+list_f = {"가나": ['가', '나'], "다라": ["다", "라"]}
+print(list_f)
+print(list_f["가나"])
+
+dictionary = {
+    "name": "여름과일",
+    "type": "건조",
+    "ingredient": ["바나나", "망고", "파일애플"],
+    "origin": "korea"
+}
+
+print("dictionary : ", dictionary)
+print("name : ", dictionary["name"])
+print(dictionary["ingredient"][0])
+dictionary["name"] = "가을과일"
+print("name : " + dictionary["name"])
+
+name = "망고"
+dictionary_a = {
+    name: "건조 망고",
+    type: "반건조"
+}
+print(dictionary_a)
+
+name = "망고"
+type = "건조"
+dictionary_b = {
+    name: "건조 망고",
+    type: "반건조"
+}
+print(dictionary_b)
+
+dictionary_b["etc"] = "기타 메모"
+print(dictionary_b)
+del dictionary_b["etc"]
+print(dictionary_b)
+
+if "etc" in dictionary_b:
+    print("etc 키가 존재합니다")
+else:
+    print('etc 키가 없습니다')
+
+print(dictionary_b.get("없는 키"))
+print(dictionary_b.get(type))
+print(dictionary_b.get("type"))
+
+for key in dictionary_b:
+    print("key : ", key, "and", key)
