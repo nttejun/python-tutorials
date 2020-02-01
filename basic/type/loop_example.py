@@ -121,3 +121,120 @@ print(dictionary_b.get("type"))
 
 for key in dictionary_b:
     print("key : ", key, "and", key)
+
+
+range_a = range(5)
+print(range_a)
+
+range_b = range(1, 5)
+print(range_b)
+
+print(list(range_a))
+print(list(range_b))
+
+range_c = range(2, 5, 10)
+print(range_c)
+print(list(range_c))
+
+range_d = range(0, 10 + 1)
+print(range_d)
+print(list(range_d))
+
+range_e = range(0, 10, 2)
+print(range_e)
+print(list(range_e))
+
+range_f = range(1, 20, 3)
+print(range_f)
+print(list(range_f))
+
+range_g = range(1, 20, -3)
+print(range_g)
+print(list(range_g))
+
+range_hh = 20
+range_h = range(1, int(range_hh / 2))
+print(list(range_h))
+
+range_h = range(1, range_hh // 2)
+print(list(range_h))
+
+for i in range(5):
+    print(str(i) + " 변수 ")
+print()
+
+range_array_a = [10, 20, 100, 200]
+for i in range(len(range_array_a)):
+    print("{}번째 반복 : {}".format(i, range_array_a[i]))
+
+for i in range(4, 0 -1, -1):
+    print("현재 반복 변수 : {}".format(i))
+    print("현재 반복 변수 : {}, {}".format(i, i))
+
+range_array_b = [1, 10, 50, 100, 150]
+for element in range_array_b:
+    print(element)
+
+
+range_array_c = [1, 10, 50, 100, 150]
+for i in range(len(range_array_c)):
+    print("{}번째 반복 : {}".format(i, range_array_c[i]))
+
+for i in range(4, 0-1, -1):
+    print("현재 반복 변수 : {}".format(i))
+
+for i in range(4, 0-1, -2):
+    print("현재 반복 변수 : {}".format(i))
+
+print()
+
+for i in reversed(range(5)):
+    print("현재 반복 변수 : {}".format(i))
+
+print()
+
+
+while_a = 0
+while while_a < 10:
+    print("{}번째 반복입니다.".format(while_a))
+    while_a += 1
+
+list_aa = [1, 2, 1, 2]
+value = 2
+while value in list_aa:
+    list_aa.remove(value)
+print(list_aa)
+
+import time
+print(time.time())
+
+number_a = 0
+target_a = time.time() + 2
+while time.time() < target_a:
+    number_a += 1
+
+print("2초 동안 {}번 반복.".format(number_a))
+print()
+
+number_a = 0
+while True:
+    print("{}번째 반복문입니다.".format(i))
+    number_a = number_a + 1
+    input_a = input("> 종료하시겠습니까?(y): ")
+    if input_a in ["y", "Y"]:
+        print("반복문을 종료합니다")
+        break
+
+number_b = [5, 15, 6, 16, 7, 17]
+for number in number_b:
+    if number < 10:
+        continue
+
+print(number)
+print()
+
+for number in number_b:
+    if number < 10:
+        continue
+
+print(number)
