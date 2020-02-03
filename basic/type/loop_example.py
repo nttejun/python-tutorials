@@ -261,3 +261,85 @@ for i in reversed(reversed_a):
 list_aaa = ["A", "B", "C", "D"]
 print(enumerate(list_aaa))
 print(list(enumerate(list_aaa)))
+
+item_a = {
+    "KEY A" : "KEY A",
+    "KEY B" : "KEY B",
+    "KEY C" : "KEY C"
+}
+
+print("딕셔너리 items() 함수")
+print("items : ", item_a.items())
+
+for key, element in item_a.items():
+    print("dictionary [{}] = {} ".format(key, element))
+
+array_a = []
+for i in range(0, 20, 2):
+    array_a.append(i * 1)
+
+print(array_a)
+
+array_a = [i*i for i in range(0, 20, 2)]
+print("리스트 내포 : [표현식 for 반복자 in 반복할 수 있는 것]")
+print(array_a)
+
+array_b = ["사과", "딸기", "배", "초콜릿"]
+array_c = [fruit for fruit in array_b if fruit != "초콜릿"]
+print("[표현식 for 반복자 in 반복할 수 있는 것 if 조건문] =", array_c)
+
+number_c = int(input("정수 입력 > "))
+print_a = (
+    "여러 줄 "
+    "하나의 문자열로 "
+    "연결되어 생성 "
+)
+if number_c % 2 == 0:
+    print("""\
+    구문 내부에
+    여러 줄 문자열
+    사용하는 경우 문제점
+    {} = 짝수""".format(number_c, number_c))
+    print("구문 내부에\n여러 줄 문자열 사용하는 경우 올바른 케이스\n{} = 짝수".format(number_c, number_c))
+    print()
+    print(print_a)
+else:
+    print("""\
+    {} = 홀수""".format(number_c, number_c))
+    print("구문 내부에\n여러 줄 문자열 사용하는 경우 올바른 케이스\n{} = 홀수".format(number_c, number_c))
+    print()
+    print(print_a)
+
+
+print()
+print("::".join(["1", "2", "3", "4", "5"]))
+join_a = ["1", "2", "3", "4", "5"]
+
+number_d = int(input("정수 입력 >"))
+if number_d % 2 == 0:
+    print("\n".join([
+        "입력한 문자열은 {}입니다.",
+        "{}는(은) 짝수입니다."
+    ]).format(number_d, number_d))
+else:
+    print("\n".join([
+        "입력한 문자열은 {}입니다.",
+        "{}는(은) 홀수입니다."
+    ]).format(number_d, number_d))
+
+number_e = [1, 2, 3, 4, 5, 6]
+number_f = reversed(number_e)
+print("reversed numbers :", number_f)
+print(next(number_f))
+print(next(number_f))
+print(next(number_f))
+print(next(number_f))
+print(next(number_f))
+print(next(number_f))
+
+print()
+print("{:o}".format(10))
+print("{:x}".format(10))
+print(int("12", 6))
+print(int("10", 16))
+print(int("a", 16))
