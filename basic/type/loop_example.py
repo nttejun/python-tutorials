@@ -238,3 +238,26 @@ for number in number_b:
         continue
 
 print(number)
+print()
+
+list_g = [1, 10, 2, 20, 3, 30]
+print(max(list_g))
+print(sum(list_g))
+print(reversed(list_g))
+print(list_g[::-1])
+print(list_g[::1])
+print(list_g[::2])
+print()
+
+reversed_a = [1, 2, 3, 4, 5]
+print(list(reversed(reversed_a)))
+
+for i in reversed(reversed_a):
+    print(" - ", i)
+
+for i in reversed(reversed_a):
+    print(" - {} - ".format(i))
+
+list_aaa = ["A", "B", "C", "D"]
+print(enumerate(list_aaa))
+print(list(enumerate(list_aaa)))
