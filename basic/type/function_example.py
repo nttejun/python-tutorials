@@ -114,6 +114,99 @@ def sum_all(start=0, end=100, step=1):
         output += i
     return output
 
-print("A :", sum_all(0, 100, 10))
-print("A :", sum_all(0, 5, 3))
-print("A :", sum_all(0, 5, 30))
+print("A :", sum_all(0, end=100, step=10))
+print("A :", sum_all(0, end=5, step=30))
+
+def factorial(n):
+    output = 1
+    for i in range(1, n+1):
+        output *= i
+    return output
+
+print("1!: ", factorial(1))
+print("1!: ", factorial(2))
+print("1!: ", factorial(10))
+
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+print("5! : ", factorial(5))
+
+def fibonacci(n):
+    if n == 1:
+        return 1
+    if n == 2:
+        return 1
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+
+print("fibonacci : ", fibonacci(1))
+print("fibonacci : ", fibonacci(2))
+print("fibonacci : ", fibonacci(3))
+print("fibonacci : ", fibonacci(4))
+print("fibonacci : ", fibonacci(5))
+print("fibonacci : ", fibonacci(10))
+print()
+
+counter = 0
+def fibonacci(n):
+    print("fibonacci({})".format(n))
+    global counter
+    counter += 1
+    if n == 1:
+        return 1
+    if n == 2:
+        return 1
+    else :
+        return fibonacci(n-1) + fibonacci(n-2)
+
+
+fibonacci(10)
+print("----")
+print("fibonacci(10) : {}번 덧셈 하였습니다.".format(counter))
+
+dictionary = {
+    1: 1,
+    2: 2
+}
+
+def fibonacci(n):
+    if n in dictionary:
+        return dictionary[n]
+    else:
+        output = fibonacci(n-1) + fibonacci(n-2)
+        dictionary[n] = output
+        return output
+
+print("fibonacci(10) : ", fibonacci(10))
+
+import timeit
+start = timeit.default_timer()
+
+def fibonacci(n):
+
+    if n in dictionary:
+        return dictionary[n]
+    else:
+        output = fibonacci(n-1) + fibonacci(n-2)
+        dictionary[n] = output
+        return output
+
+print("f 50 :", fibonacci(50))
+stop = timeit.default_timer()
+print(stop - start)
+
+
+import timeit
+start = timeit.default_timer()
+def fibbonacci(n):
+    if n in dictionary:
+        return dictionary[n]
+    output = fibonacci(n-1) + fibonacci(n-2)
+    dictionary[n] = output
+    return output
+print("f 50 :", fibonacci(50))
+stop = timeit.default_timer()
+print(stop - start)
