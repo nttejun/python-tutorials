@@ -210,3 +210,127 @@ def fibbonacci(n):
 print("f 50 :", fibonacci(50))
 stop = timeit.default_timer()
 print(stop - start)
+
+def number_input():
+    output = input("숫자 입력> ")
+    return float(output)
+def get_circumference(radius):
+    return 2 * 3.14 * radius
+def get_circle_area(radius):
+    return 3.14 * radius * radius
+
+radius = number_input()
+print(get_circumference(radius))
+print(get_circle_area(radius))
+
+# 튜플 형태 (data, data, data)
+tuple_test = (10, 20, 30)
+print(tuple_test[0])
+print(tuple_test[1])
+print(tuple_test[2])
+
+[a, b] = [10, 20]
+(c, d) = (10, 20)
+
+print("a : ",a)
+print("b : ",b)
+print("c : ",c)
+print("d : ",d)
+
+tuple_test = 10, 20, 30, 40
+print("tuple test:", tuple_test)
+print("tuple test:", type(tuple_test))
+print()
+
+a, b, c = 10, 20, 30
+print("a: ",a)
+print("b: ",b)
+print("c: ",c)
+
+a, b, c = c, b, a
+print("교환")
+print("a: ",a)
+print("b: ",b)
+print("c: ",c)
+
+def test():
+    return(10, 20)
+
+a, b = test()
+a = 30
+print("a :",a ,"b :",b)
+
+def test():
+    pass
+
+def test():
+    return (10, 20)
+print("a : ", a )
+print("b : ", b )
+print("a, b : ", test())
+
+def test():
+    return 10, 20
+print(test())
+
+def test():
+    return 10 * 20
+print(test())
+
+a, b = 97, 40
+print(a // b)
+print(a * b)
+
+print(divmod(a, b))
+x, y = divmod(a, b)
+print(x, y)
+
+def call_10_times(func):
+    for i in range(10):
+        func()
+
+def print_hello():
+    print("hello")
+call_10_times(print_hello)
+
+def power(item):
+    return item * item
+def under_3(item):
+    return item < 3
+
+list_input_a = [1, 2, 3, 4, 5]
+
+output_a = map(power, list_input_a)
+print("map(power, list_input_a):", output_a)
+print("map(power, list_input_a):", list(output_a))
+print()
+
+output_b = filter(under_3, list_input_a)
+print("# filter() 함수 실행결과")
+print("# filter(under_3, list_input_a) : ", output_b)
+print("# filter(under_3, list_input_a) : ", list(output_b))
+
+power = lambda x: x*x
+under_3 = lambda x: x<3
+list_input_a = [1,2,3,4,5]
+
+output_a = map(power, list_input_a)
+print("map() 함수")
+print("map() 함수 : ", output_a)
+print("map() 함수 : ", list(output_a))
+print()
+
+output_b = filter(under_3, list_input_a)
+print("filter() 함수")
+print("filter() 함수 : ", output_b)
+print("filter() 함수 : ", list(output_b))
+print()
+
+list_input_a = [1, 2, 3, 4, 5]
+output_a = map(lambda x: x*x, list_input_a)
+print(output_a)
+print(list(output_a))
+
+list_input_b = filter(lambda x: x<3, list_input_a)
+print("filter : ", list_input_b)
+print("filter : ", list(list_input_b))
