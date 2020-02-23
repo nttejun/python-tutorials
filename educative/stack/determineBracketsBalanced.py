@@ -1,45 +1,48 @@
 from stack import Stack
 
 
-def isBalanced(balanceCheckString):
-    s = Stack()
-    is_balanced = True
+def isMatch(parent, child):
+    if parent == "{" and child == "}":
+        return True
+    elif parent == "[" and child == "]":
+        return True
+    elif parent == "(" and child == ")":
+        return True
+    else:
+        return False
+
+
+def checkBalance(checkValue):
+    stack = Stack()
+    isBalanStatus = True
     index = 0
 
-    while index < len(balanceCheckString) and is_balanced:
-        open = balanceCheckString[index]
-        if open in "([{":
-            s.push(open)
-        else:
-            if s.is_empty():
-                is_balanced = False
-            else:
-                top = s.pop()
-                if not is_match(top, open):
-                    is_balanced = False
+    while index < len(checkValue) and isBalanStatus:
+        child = checkValue[index]
+        if child in "([{":
+           stack.push(child)
+        else :
+            if stack.is_empty():
+                isBalanStatus = False
+            else :
+                parent = stack.pop()
+                if not isMatch(parent, child):
+                    isBalanStatus = False
+
         index += 1
 
-    if s.is_empty() and is_balanced:
+    if stack.is_empty() and isBalanStatus:
         return True
     else:
         return False
 
-
-def is_match(p1, p2):
-    if p1 == "(" and p2 == ")":
-        return True
-    elif p1 == "{" and p2 == "}":
-        return True
-    elif p1 == "[" and p2 == "]":
-        return True
-    else:
-        return False
 
 
 balanceSample = ["{", "{", "(", ")", "}", "}"]
-sampleResult = isBalanced(balanceSample)
+sampleResult = checkBalance(balanceSample)
 print(sampleResult)
 
-balanceSample = ["{", "{", "(", ")", "}", "}", "}"]
-sampleResult = isBalanced(balanceSample)
+balanceSample = ["{", "{", "(", ")", "}", "}", ")", ")"]
+sampleResult = checkBalance(balanceSample)
 print(sampleResult)
+
