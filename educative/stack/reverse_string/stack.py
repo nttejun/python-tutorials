@@ -14,5 +14,5 @@ class Stack():
     def is_empty(self):
         return self.values == []
 
-    def get_stackl(self):
+    def get_stack(self):
         return self.values
