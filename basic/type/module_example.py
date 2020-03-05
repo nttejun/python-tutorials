@@ -26,8 +26,8 @@ now = datetime.datetime.now()
 print(now)
 print(now.second)
 
-after = now + datetime.timedelta(\
-    days=1,\
+after = now + datetime.timedelta(
+    days=1,
     hours=1
 )
 print(after.strftime("%Y{} %m{} %d{} %H{}").format(*"년월일시"))
