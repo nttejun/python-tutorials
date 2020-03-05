@@ -9,9 +9,7 @@ class Stack():
         return self.values.pop()
 
     def peek(self):
-        if not self.is_empty():
-            return self.values[-1]
+        return self.peek(-1)
 
     def is_empty(self):
         return self.values == []
-
