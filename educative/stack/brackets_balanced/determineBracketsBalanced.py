@@ -1,4 +1,4 @@
-from brackets_balanced.stack import Stack
+from stack import Stack
 
 
 def isMatch(parent, child):
